@@ -20,12 +20,12 @@
         <img src='{% static 'images/logo.svg' %}' alt="logo"/>
       </div>
     </div>
-    <div class="row navbar-n">
+    <div class="row navbar-n" style="padding-bottom: 5vh;">
         {% block sidebar %}
         <nav class="navbar">
-          <a class='nav-link' role="button" href="{% url 'index' %}">Home</a>
-          <a class='nav-link' href="">Posts</a>
-          <a class='nav-link' href="">News</a>
+          <a class='nav-link' style="padding-top: 0.5vh;" role="button" href="{% url 'index' %}">Home</a>
+          <a class='nav-link' style="padding-top: 0.5vh;" href="">Posts</a>
+          <a class='nav-link' style="padding-top: 0.5vh;" href="">News</a>
         </ul>
         {% endblock %}
         </div>
