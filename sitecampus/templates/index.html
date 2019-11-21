@@ -4,7 +4,8 @@
   <h2>Posts Recentes</h2>
   <div class='row'>
   {% for post in posts.all %}
-      <div class='card ml-3 mb-3' style="max-width: 30vw;" >
+    {% if post.hierarquia == "1" and post.estado == "3" %}
+      <div class='card ml-3 mb-3 bg-primary text-white' style="max-width: 30vw;" >
         <div class='card-header'>
           <strong>{{post.titulo}}</strong>
         </div>
@@ -25,6 +26,30 @@
           </small>
         </div>
       </div>
+      {% endif %}
+      {% if post.hierarquia == "2" %}
+      <div class='card ml-3 mb-3 bg-success' style="max-width: 30vw;" >
+        <div class='card-header'>
+          <strong>{{post.titulo}}</strong>
+        </div>
+        <div class='card-body text-secondary'>
+          <small>{{post.sutia}}</small>
+        </div>
+        <div class='card-image'>
+          <img src="#" alt="imagem vem aqui"/>
+        </div>
+        <div class='card-body'>
+          <small>{{post.conteudo}}</small>
+          <a href='#'>saiba mais</a>
+        </div>
+        <div class='card-footer'>
+          <small>
+            autor: {{post.autor}}<br>
+            semestre: {{post.semestre_publicação}}<br>
+          </small>
+        </div>
+      </div>
+      {% endif %}
     {% endfor %}
     </div>
 {% endblock %}

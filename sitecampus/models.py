@@ -11,6 +11,12 @@ class Post(models.Model):
         ('3' , 'Pronto'),
     )
 
+    HIERARQUIA = (
+        ('1' , 'Primaria'),
+        ('2' , 'Secundaria'),
+        ('3' , 'Terciaria'),
+    )
+
     titulo = models.CharField(max_length=100)
 
     autor = models.ForeignKey('Autor', on_delete=models.SET_NULL, null=True)
@@ -22,6 +28,8 @@ class Post(models.Model):
     estado = models.CharField(max_length=1, choices=EstadoPub, blank=False, default="Rascunho", null=False)
 
     semestre_publicação = models.CharField(max_length=6, blank=False, null=False, help_text=u"20xx/x")
+
+    hierarquia = models.CharField(max_length=1, choices=HIERARQUIA, blank=False, default="", null=False)
 
     sutia = models.TextField(max_length=200, blank=True, null=True)
 
