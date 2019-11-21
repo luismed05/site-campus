@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Posts Recentes</h1>
+  <div class='row'>
+  {% for post in posts.all %}
+      <div class='card ml-3 mb-3' style="max-width: 30vw; max-heigth: 15vh;" >
+        <div class='card-header'>
+          <strong>{{post.titulo}}</strong>
+        </div>
+        <div class='card-body'>
+          <small>{{post.conteudo}}</small>
+        </div>
+        <div class='card-footer'>
+          <small>
+            autor: {{post.autor}}<br>
+            <a href='#'>saiba mais</a>
+          </small>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
