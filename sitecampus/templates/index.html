@@ -1,55 +1,61 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h2>Posts Recentes</h2>
-  <div class='row'>
-  {% for post in posts.all %}
-    {% if post.hierarquia == "1" and post.estado == "3" %}
-      <div class='shadow-lg card ml-3 mb-3 border-primary text-primary' style="max-width: 30vw;" >
-        <div class='card-header'>
-          <strong>{{post.titulo}}</strong>
+<h2>Posts Recentes</h2>
+<div class='row'>
+	{% for post in posts.all %}
+	{% if post.estado == "3" %}
+	{% if post.hierarquia == "1" %}
+	<div class="col-lg-6">
+		<div class='shadow-lg card border-primary text-primary' >
+			<div class='card-header'>
+				<strong>{{post.titulo}}</strong>
+			</div>
+			<div class='card-body text-secondary'>
+				<small>{{post.sutia}}</small>
+			</div>
+			<div class='card-image'>
+				<img src="#" alt="imagem vem aqui"/>
+            </div>
+			<div class='card-body'>
+				<small>{{post.conteudo}}</small>
+				<a href='#'>saiba mais</a>
+			</div>
+			<div class='card-footer'>
+				<small>
+                    autor: {{post.autor}}<br>
+                    semestre: {{post.semestre_publicação}}<br>
+                </small>
+			</div>
         </div>
-        <div class='card-body text-secondary'>
-          <small>{{post.sutia}}</small>
-        </div>
-        <div class='card-image'>
-          <img src="#" alt="imagem vem aqui"/>
-        </div>
-        <div class='card-body'>
-          <small>{{post.conteudo}}</small>
-          <a href='#'>saiba mais</a>
-        </div>
-        <div class='card-footer'>
-          <small>
-            autor: {{post.autor}}<br>
-            semestre: {{post.semestre_publicação}}<br>
-          </small>
-        </div>
-      </div>
-      {% endif %}
-      {% if post.hierarquia == "2" and post.estado == "3" %}
-      <div class='card ml-3 mb-3 border-success text-success' style="max-width: 30vw;" >
-        <div class='card-header'>
-          <strong>{{post.titulo}}</strong>
-        </div>
-        <div class='card-body text-secondary'>
-          <small>{{post.sutia}}</small>
-        </div>
-        <div class='card-image'>
-          <img src="#" alt="imagem vem aqui"/>
-        </div>
-        <div class='card-body'>
-          <small>{{post.conteudo}}</small>
-          <a href='#'>saiba mais</a>
-        </div>
-        <div class='card-footer'>
-          <small>
-            autor: {{post.autor}}<br>
-            semestre: {{post.semestre_publicação}}<br>
-          </small>
-        </div>
-      </div>
-      {% endif %}
-    {% endfor %}
-    </div>
+	</div>
+	{% endif %}
+		<div class="col-sm-6">
+			{% if post.hierarquia == "2" %}
+			<div class='card border-success text-success'>
+				<div class='card-header'>
+					<strong>{{post.titulo}}</strong>
+				</div>
+				<div class='card-body text-secondary'>
+					<small>{{post.sutia}}</small>
+				</div>
+				<div class='card-image'>
+					<img src="#" alt="imagem vem aqui"/>
+                </div>
+					<div class='card-body'>
+						<small>{{post.conteudo}}</small>
+						<a href='#'>saiba mais</a>
+					</div>
+					<div class='card-footer'>
+						<small>
+                            autor: {{post.autor}}<br>
+                            semestre: {{post.semestre_publicação}}<br>
+                        </small>
+					</div>
+				</div>
+            </div>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+		</div>
 {% endblock %}

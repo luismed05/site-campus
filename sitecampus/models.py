@@ -1,5 +1,6 @@
 from django.db import models
 from modelchoices import Choices
+from taggit.managers import TaggableManager
 
 
 # model de Post
@@ -25,7 +26,9 @@ class Post(models.Model):
 
     conteudo = models.TextField(max_length=1000)
 
-    estado = models.CharField(max_length=1, choices=EstadoPub, blank=False, default="Rascunho", null=False)
+    tags = TaggableManager()
+
+    estado = models.CharField(max_length=1, choices=EstadoPub, blank=False, default="1", null=False)
 
     semestre_publicação = models.CharField(max_length=6, blank=False, null=False, help_text=u"20xx/x")
 

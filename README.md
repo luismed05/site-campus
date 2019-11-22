@@ -50,6 +50,8 @@
 - pip install django-model-choices
 #### Usado na models
 - pip install Pillow
+#### Usado para criar tags nos posts
+- pip install django-taggit 
 
 ### Agora vamos testar a instalação do django
 #### dentro da pasta do projeto (a pasta com manage.py e duas pastas) rode
