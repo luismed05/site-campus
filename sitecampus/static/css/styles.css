@@ -2,14 +2,28 @@
     padding: 1vw;
     width: 100vw;
     background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-n{
+.logo {
+    width: 14vw;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.navbar-n {
     display: flex;
     height: 4vh;
     flex-direction: row;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.navheader {
+    padding: 0 1rem;
 }
 
 .nav-link {
@@ -21,12 +35,6 @@
     transition: all 0.25s ease 0s;
 }
 
-.logo{
-    width: 14vw;
-    height: 40px;
-    margin-left: 10px;
-}
-
 .content {
     margin-top: 30px;
 }
@@ -34,6 +42,36 @@
 .post {
     background-color: rgb(26, 27, 28);
     border: rgb(26, 27, 28);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2vw;
+}
+
+.post_title1 {
+    color: rgb(148, 40, 50);
+}
+
+.post_title2 {
+    color: rgb(33, 150, 83);
+}
+
+.image_link {
+    color: rgb(72, 83, 240);
+}
+
+.content_body {
+    color: white;
+}
+
+#mais {
+    color: rgb(138, 135, 135);
+}
+
+#mais:hover {
+    font-weight: bold;
+}
+
+.footer_author {
+    color: rgb(138, 135, 135);
 }
 
 
