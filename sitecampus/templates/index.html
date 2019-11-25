@@ -6,8 +6,8 @@
 	{% for post in posts.all %}
 	{% if post.estado == "3" %}
 	{% if post.hierarquia == "1" %}
-	<div class="col-lg-6">
-		<div class='shadow-lg card border-primary text-primary' >
+	<div class="col-lg-6" >
+		<div class='shadow-lg card border-primary text-primary post' >
 			<div class='card-header'>
 				<strong>{{post.titulo}}</strong>
 			</div>
@@ -30,7 +30,7 @@
         </div>
 	</div>
 	{% endif %}
-		<div class="col-sm-6">
+		<div class="col-sm-6 post">
 			{% if post.hierarquia == "2" %}
 			<div class='card border-success text-success'>
 				<div class='card-header'>

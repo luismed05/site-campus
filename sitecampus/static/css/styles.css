@@ -1,7 +1,6 @@
 .header{
-    padding-left: 1vw;
+    padding: 1vw;
     width: 100vw;
-    border: solid 1px black;
     background-color: grey;
 }
 
@@ -10,9 +9,31 @@
     height: 4vh;
     flex-direction: row;
     justify-content: flex-start;
-    border: solid black 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+    color: rgb(138, 135, 135);
+}
+
+.nav-link:hover {
+    color: white;
+    transition: all 0.25s ease 0s;
 }
 
 .logo{
-    width: 10vw;
+    width: 14vw;
+    height: 40px;
+    margin-left: 10px;
 }
+
+.content {
+    margin-top: 30px;
+}
+
+.post {
+    background-color: rgb(26, 27, 28);
+    border: rgb(26, 27, 28);
+}
+
+
