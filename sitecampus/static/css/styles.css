@@ -1,3 +1,10 @@
+.back_img {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100vw;
+    height: 30vw;
+}
+
 .header{
     padding: 1vw;
     width: 100vw;
@@ -6,6 +13,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top:0;
+    z-index:10
 }
 
 .logo {
@@ -44,6 +54,8 @@
     border: rgb(26, 27, 28);
     font-family: Arial, Helvetica, sans-serif;
     padding: 2vw;
+    overflow: hidden;
+    margin-bottom: 2vw;
 }
 
 .post_title1 {
