@@ -20,11 +20,13 @@ class Post(models.Model):
 
     titulo = models.CharField(max_length=100)
 
+    sutia = models.TextField(max_length=200, blank=True, null=True)
+
     autor = models.ForeignKey('Autor', on_delete=models.SET_NULL, null=True)
 
     editoria = models.ForeignKey('Editoria', on_delete=models.SET_NULL, null=True)
 
-    conteudo = models.TextField(max_length=1000)
+    conteudo = models.TextField( default="")
 
     tags = TaggableManager()
 
@@ -33,8 +35,6 @@ class Post(models.Model):
     semestre_publicação = models.CharField(max_length=6, blank=False, null=False, help_text=u"20xx/x")
 
     hierarquia = models.CharField(max_length=1, choices=HIERARQUIA, blank=False, default="", null=False)
-
-    sutia = models.TextField(max_length=200, blank=True, null=True)
 
     post_image = models.ImageField(upload_to='images/', blank=True, null=True)
 

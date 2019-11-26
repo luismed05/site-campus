@@ -32,6 +32,7 @@ urlpatterns += [
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/sitecampus/')),
+    path('djrichtextfield/', include('djrichtextfield.urls'))
 ]
 
 # Use static() to add url mapping to serve static files during development (only)

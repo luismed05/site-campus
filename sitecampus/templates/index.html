@@ -5,55 +5,57 @@
 <div class='row' style="margin-top: 10px;">
 	{% for post in posts.all %}
 	{% if post.estado == "3" %}
-	{% if post.hierarquia == "1" %}
-	<div class="col-lg-6" >
-		<div class='shadow-lg card border-primary text-primary post' >
-			<div class='card-header post_title1'>
-				<strong>{{post.titulo}}</strong>
-			</div>
-			<div class='card-body text-secondary'>
-				<small>{{post.sutia}}</small>
-			</div>
-			<div class='card-image image_link'>
-				<img src="#" alt="imagem vem aqui"/>
-            </div>
-			<div class='card-body content_body'>
-				<small>{{post.conteudo}}</small>
-				<a id="mais" href='#'>saiba mais</a>
-			</div>
-			<div class='card-footer footer_author' >
-				<small>
-                    autor: {{post.autor}}<br>
-                    semestre: {{post.semestre_publicação}}<br>
-                </small>
-			</div>
-        </div>
-	</div>
-	{% endif %}
-		<div class="col-sm-6">
-			{% if post.hierarquia == "2" %}
-			<div class='card border-success text-success post'>
-				<div class='card-header post_title2'>
-					<strong>{{post.titulo}}</strong>
-				</div>
-				<div class='card-body text-secondary'>
-					<small>{{post.sutia}}</small>
-				</div>
-				<div class='card-image image_link'>
-					<img src="#" alt="imagem vem aqui"/>
+        {% if post.hierarquia == "1" %}
+        <div class="col-lg-6" >
+            <div class='shadow-lg card border-primary text-primary post' style="width: 25vw;" >
+                <div class='card-header post_title1'>
+                    <strong>{{post.titulo}}</strong>
                 </div>
-					<div class='card-body content_body'>
-						<small>{{post.conteudo}}</small>
-						<a id="mais" href='#'>saiba mais</a>
-					</div>
-					<div class='card-footer footer_author'>
-						<small>
-                            autor: {{post.autor}}<br>
-                            semestre: {{post.semestre_publicação}}<br>
-                        </small>
-					</div>
-				</div>
+                <div class='card-body text-secondary'>
+                    <small><i>{{post.sutia}}</i></small>
+                </div>
+                <div class='card-image image_link'>
+                    <img src="https://www.imagemhost.com.br/images/2019/11/19/download-34.jpg" alt="imagem vem aqui"/>
+                </div>
+                <div class='card-body content_body'>
+                    <div style="overflow: hidden; height: 20vh; width: 20vw;">
+                        <small><b>{{post.conteudo}}</b></small>
+                    </div>
+                    <a id="mais" href='#'>saiba mais</a>
+                </div>
+                <div class='card-footer footer_author' >
+                    <small>
+                        autor: {{post.autor}}<br>
+                        semestre: {{post.semestre_publicação}}<br>
+                    </small>
+                </div>
             </div>
+        </div>
+        {% endif %}
+            <div class="col-sm-6">
+                {% if post.hierarquia == "2" %}
+                <div class='card border-success text-success post'>
+                    <div class='card-header post_title2'>
+                        <strong>{{post.titulo}}</strong>
+                    </div>
+                    <div class='card-body text-secondary'>
+                        <small>{{post.sutia}}</small>
+                    </div>
+                    <div class='card-image image_link'>
+                        <img src="#" alt="imagem vem aqui"/>
+                    </div>
+                        <div class='card-body content_body'>
+                            <small>{{post.conteudo}}</small>
+                            <a id="mais" href='#'>saiba mais</a>
+                        </div>
+                        <div class='card-footer footer_author'>
+                            <small>
+                                autor: {{post.autor}}<br>
+                                semestre: {{post.semestre_publicação}}<br>
+                            </small>
+                        </div>
+                    </div>
+                </div>
 			{% endif %}
 		{% endif %}
 	{% endfor %}
