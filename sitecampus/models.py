@@ -36,7 +36,7 @@ class Post(models.Model):
 
     hierarquia = models.CharField(max_length=1, choices=HIERARQUIA, blank=False, default="", null=False)
 
-    post_image = models.ImageField(upload_to='images/', blank=True, null=True)
+    post_image = models.CharField( max_length=90, blank=True, null=True, help_text="url da imagem hospedada")
 
     def __str__ (self):
         return self.titulo
