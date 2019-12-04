@@ -51,7 +51,7 @@
 
 .post {
     background-color: rgb(255, 255, 255);
-    border: rgb(255, 255, 255);
+    border: 1px solid #6c757d !important;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2vw;
     overflow: hidden;
@@ -71,7 +71,7 @@
 }
 
 .content_body {
-    color: white;
+    color: black;
 }
 
 #mais {
